@@ -8,7 +8,11 @@
 </head>
 <body>
 
-<%= yield %>
+<%=	 render 'layouts/header' %>
 
+<%= yield %>
+<script>
+  $.material.init()
+</script>
 </body>
 </html>
