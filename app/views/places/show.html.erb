@@ -28,5 +28,12 @@
   <%= @place.user_id %>
 </p>
 
+<p>
+  <%=	@place.longitude %>
+  <%=	@place.latitude %>
+</p>
+
+<div id="map-canvas" style="width: 230px; height:230px"></div>
+
 <%= link_to 'Edit', edit_place_path(@place) %> |
 <%= link_to 'Back', places_path %>
