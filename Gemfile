@@ -6,8 +6,8 @@ gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
-gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
+gem 'materialize-sass'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -46,9 +46,13 @@ group :development do
   gem 'spring'
 end
 
-gem 'bootstrap-material-design'
 gem 'font-awesome-rails'
 gem 'simple_form'
 gem 'devise'
 gem 'gravatarify'
 gem 'geocoder'
+gem 'jquery-turbolinks'
+
+group :production do
+  gem 'rails_12factor'
+end

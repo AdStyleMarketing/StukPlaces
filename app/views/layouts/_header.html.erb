@@ -1,50 +1,32 @@
-<div class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="javascript:void(0)">Brand</a>
-    </div>
-    <div class="navbar-collapse collapse navbar-responsive-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="javascript:void(0)">Active</a></li>
-        <li><a href="javascript:void(0)">Link</a></li>
-        <li class="dropdown">
-          <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
-            <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="javascript:void(0)">Action</a></li>
-            <li><a href="javascript:void(0)">Another action</a></li>
-            <li><a href="javascript:void(0)">Something else here</a></li>
-            <li class="divider"></li>
-            <li class="dropdown-header">Dropdown header</li>
-            <li><a href="javascript:void(0)">Separated link</a></li>
-            <li><a href="javascript:void(0)">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control col-md-8" placeholder="Search">
-        </div>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="javascript:void(0)">Link</a></li>
-        <li class="dropdown">
-          <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
-            <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="javascript:void(0)">Action</a></li>
-            <li><a href="javascript:void(0)">Another action</a></li>
-            <li><a href="javascript:void(0)">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="javascript:void(0)">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+<ul id="dropdown1" class="dropdown-content">
+  <% if current_user %>
+      <li><%= link_to 'Settings', edit_user_registration_path %> </li>
+      <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+  <% else %>
+      <li><%= link_to 'Login', new_user_session_path %></li>
+      <li><%= link_to 'Signup', new_user_registration_path %></li>
+  <% end %>
+</ul>
+
+<nav>
+  <div class="nav-wrapper">
+    <%=	 link_to "StukPLaces", root_path, class: 'brand-logo' %>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><%= link_to 'Places', places_path %></li>
+      <li><a href="badges.html">Components</a></li>
+      <li><a href="collapsible.html">JavaScript</a></li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li><%= link_to 'Places', places_path %></li>
+      <li><a href="badges.html">Components</a></li>
+      <li><a href="collapsible.html">JavaScript</a></li>
+      <!-- Dropdown Trigger -->
+
+    </ul>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
   </div>
-</div>
+</nav>
+
+

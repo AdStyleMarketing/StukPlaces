@@ -4,6 +4,8 @@
   <title>StukPlaces</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- Material Design fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <%= csrf_meta_tags %>
   <script async defer
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsLyMC_Z9VueHCzCdvKKZM6yfSM-s-VP8&callback=initMap">
@@ -21,14 +23,16 @@
     </div>
 <% end %>
 
-<div class="jumbotron">
+
   <%= yield %>
 
-  <p><a class="btn btn-primary btn-lg">Learn more</a></p>
-</div>
 
 
 
 
+
+
+
+<script>$(".button-collapse").sideNav();</script>
 </body>
 </html>

@@ -11,10 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
+//= require materialize-sprockets
+//= require materialize/extras/nouislider
 //= require jquery.raty
-//= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
-//= require bootstrap-material-design
-
