@@ -1,12 +1,4 @@
-<script type="text/javascript">
-  var map;
-  function initMap() {
-    map = new google.maps.Map(document.getElementById('map-canvas'), {
-      center: {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>},
-      zoom: 8
-    });
-  }
-</script>
+
 <div class="row">
   <div class="col-md-3">
     <h3><%= @place.name %></h3>
@@ -37,4 +29,20 @@
 </div>
 
 
+<script type="text/javascript">
+  var map;
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map-canvas'), {
+      center: {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>},
+      zoom: 8
+    });
+  }
 
+  <% @reviews.each do |review| %>
+  $(".score_<%= review.id %> ").raty({
+    score: '<%= review.score %>',
+    readOnly: true
+  });
+  <% end %>
+
+</script>
