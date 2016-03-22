@@ -2,6 +2,7 @@
 <div class="row">
   <div class="col-md-3">
     <h3><%= @place.name %></h3>
+    <div class="average"></div>
     <p>
       <strong>Address</strong>
       <%= @place.name %>
@@ -44,5 +45,10 @@
     readOnly: true
   });
   <% end %>
+
+  $(".average ").raty({
+    score: '<%= @place.total_average %>',
+    readOnly: true
+  });
 
 </script>
